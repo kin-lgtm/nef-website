@@ -158,7 +158,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Vision</h2>
               <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
-                <p className="text-2xl font-semibold text-green-700 italic mb-4">
+                <p className="text-2xl font-semibold text-green-700 mb-4">
                   "Let's conserve the nature for the posterity"
                 </p>
                 <p className="text-gray-700 leading-relaxed">

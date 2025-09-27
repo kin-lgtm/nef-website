@@ -34,7 +34,7 @@ const Homepage = () => {
   // Updated heroSlides to use image paths instead of gradients
   const heroSlides = [
     {
-      title: "Conserving Nature for Future Generations in the World",
+      title: "Conserving Nature for Future Generations",
       subtitle: "Protecting Sri Lanka's Indigenous Environmental Heritage",
       image: "/images/hero-1.jpg", // Replace with actual image paths in public/images/
       
@@ -191,13 +191,13 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-green-800 mb-4">Our Vision</h2>
-            <p className="text-2xl text-green-600 font-semibold italic">
-              "Let's conserve the nature for the posterity"
-            </p>
+            <h5 className="text-xl text-green-900">
+              Let's conserve the nature for the posterity
+            </h5>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">
+            <div className="bg-white p-8 rounded-xl shadow-lg  ">
               <Globe className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Environmental Protection</h3>
               <p className="text-gray-600">
@@ -205,7 +205,7 @@ const Homepage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">
+            <div className="bg-white p-8 rounded-xl shadow-lg ">
               <Users className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Community Engagement</h3>
               <p className="text-gray-600">
@@ -213,7 +213,7 @@ const Homepage = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-amber-500">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
               <BookOpen className="h-12 w-12 text-amber-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Indigenous Knowledge</h3>
               <p className="text-gray-600">
@@ -228,10 +228,10 @@ const Homepage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Key Objectives</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Key Objectives</h2>
+            <h5 className="text-xl text-green-900 max-w-3xl mx-auto">
               Our comprehensive approach to environmental conservation focuses on protecting Sri Lanka's natural heritage while empowering local communities.
-            </p>
+            </h5>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -249,13 +249,13 @@ const Homepage = () => {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 bg-gradient-to-r from-green-800 to-emerald-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-green-600/80 to-emerald-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Programs</h2>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            <h5 className="text-xl text-green-100 max-w-3xl mx-auto">
               Implementing practical solutions through community-driven environmental initiatives.
-            </p>
+            </h5>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
