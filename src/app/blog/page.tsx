@@ -6,19 +6,10 @@ import {
   User, 
   ArrowRight, 
   Search,
-  Tags,
   Globe,
   TreePine,
-  Droplets,
-  Mountain,
   BookOpen,
   Heart,
-  Facebook,
-  Twitter,
-  Instagram,
-  MapPin,
-  Mail,
-  Phone,
   Users
 } from 'lucide-react';
 import Footer from '@/components/footer';
@@ -139,8 +130,7 @@ const BlogPage = () => {
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">NEF Blog</h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-              Insights, stories, and expert analysis on environmental conservation, indigenous knowledge, 
-              and sustainable development in Sri Lanka.
+              Insights, stories, and expert analysis on environmental conservation, indigenous knowledge, and sustainable development in Sri Lanka.
             </p>
           </div>
         </div>
@@ -241,8 +231,7 @@ const BlogPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Subscribe to Our Blog</h2>
           <p className="text-xl text-green-100 mb-8">
-            Stay updated with the latest insights on environmental conservation and indigenous knowledge preservation.
-          </p>
+            Stay updated with the latest insights on environmental conservation and indigenous knowledge preservation.      </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
             <input 
               type="email" 

@@ -28,20 +28,19 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-green-100 text-sm leading-relaxed">
-              "Let's conserve the nature for the posterity" - Working towards environmental protection 
-              and conservation of Sri Lanka's indigenous heritage.
+              Lets conserve the nature for the posterity - Working towards environmental protection and conservation of Sri Lankas indigenous heritage.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
-            <ul className="space-y-2">
+            {/* <ul className="space-y-2">
               <li><a href="/" className="text-green-100 hover:text-white transition-colors">Home</a></li>
               <li><a href="/about" className="text-green-100 hover:text-white transition-colors">About Us</a></li>
               <li><a href="/blog" className="text-green-100 hover:text-white transition-colors">Blog</a></li>
               <li><a href="/contact" className="text-green-100 hover:text-white transition-colors">Contact</a></li>
-            </ul>
+            </ul> */}
           </div>
 
           {/* Our Focus */}
@@ -96,7 +95,7 @@ const Footer = () => {
               © 2024 National Environmental Forum (NEF). All rights reserved.
             </p>
             <p className="text-green-200 text-sm mt-2 md:mt-0">
-              Established 2012 | Protecting Sri Lanka's Natural Heritage
+              Established 2012 | Protecting Sri Lankas Natural Heritage
             </p>
           </div>
         </div>

@@ -12,14 +12,10 @@ import {
   TreePine,
   Droplets,
   Mountain,
-  Bird,
+
   Lightbulb,
   Shield,
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Instagram
+
 } from 'lucide-react';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
@@ -144,8 +140,7 @@ const AboutPage = () => {
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">About NEF</h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-              National Environmental Forum - Sri Lanka's premier environmental protection assembly, 
-              working to conserve nature for posterity since 2012.
+              National Environmental Forum - Sri Lanka has premier environmental protection assembly, working to conserve nature for posterity since 2012.
             </p>
           </div>
         </div>
@@ -159,11 +154,10 @@ const AboutPage = () => {
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Vision</h2>
               <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
                 <p className="text-2xl font-semibold text-green-700 mb-4">
-                  "Let's conserve the nature for the posterity"
+                  Lets conserve the nature for the posterity
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Our vision represents our commitment to environmental stewardship, ensuring that Sri Lanka's 
-                  rich biodiversity and indigenous ecological knowledge are preserved for future generations.
+                  Our vision represents our commitment to environmental stewardship, ensuring that Sri Lankas rich biodiversity and indigenous ecological knowledge are preserved for future generations.
                 </p>
               </div>
             </div>
@@ -274,8 +268,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-4xl font-bold text-amber-800 mb-6">Preserving Indigenous Heritage</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Sri Lanka's indigenous communities have maintained sophisticated environmental knowledge systems 
-                for over 2,500 years. NEF recognizes and works to preserve this invaluable heritage.
+                Sri Lankas indigenous communities have maintained sophisticated environmental knowledge systems for over 2,500 years. NEF recognizes and works to preserve this invaluable heritage.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -343,10 +336,8 @@ const AboutPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Founding Members</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              NEF was established on November 1st, 2012, by visionary environmental advocates committed to preserving Sri Lanka's natural heritage.
-            </p>
+              NEF was established on November 1st, 2012, by visionary environmental advocates committed to preserving Sri Lankas natural heritage.</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {founderMembers.map((founder, index) => (
               <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
@@ -465,8 +456,7 @@ const AboutPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-green-800 mb-6">Join Our Environmental Mission</h2>
           <p className="text-xl text-gray-700 mb-8">
-            Become part of Sri Lanka's premier environmental forum and contribute to preserving our natural heritage and indigenous knowledge.
-          </p>
+            Become part of Sri Lankas premier environmental forum and contribute to preserving our natural heritage and indigenous knowledge.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg">
               <Users className="h-5 w-5" />

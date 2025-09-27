@@ -5,10 +5,6 @@ import {
   Menu, 
   X, 
   Leaf, 
-  Home, 
-  Users, 
-  BookOpen, 
-  Mail 
 } from 'lucide-react';
 
 const Navbar = () => {

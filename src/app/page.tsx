@@ -5,27 +5,18 @@ import Image from 'next/image'; // Added for image support
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer'; 
 import { 
-  Menu, 
-  X, 
-  Leaf, 
+
   Users, 
   BookOpen, 
-  Mail, 
-  Home,
   ChevronRight, 
   Globe, 
   Award, 
   Calendar, 
-  MapPin, 
   TreePine,
   Droplets,
   Mountain,
   Bird,
   ArrowRight,
-  Facebook,
-  Twitter,
-  Instagram,
-  Phone
 } from 'lucide-react';
 
 const Homepage = () => {
@@ -192,7 +183,7 @@ const Homepage = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-green-800 mb-4">Our Vision</h2>
             <h5 className="text-xl text-green-900">
-              Let's conserve the nature for the posterity
+              Lets conserve the nature for the posterity
             </h5>
           </div>
           
@@ -201,7 +192,7 @@ const Homepage = () => {
               <Globe className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Environmental Protection</h3>
               <p className="text-gray-600">
-                Promoting sustainable environmental practices across Sri Lanka's diverse ecosystems.
+                Promoting sustainable environmental practices across Sri Lankas diverse ecosystems.
               </p>
             </div>
             
@@ -230,7 +221,7 @@ const Homepage = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-green-800 mb-4">Key Objectives</h2>
             <h5 className="text-xl text-green-900 max-w-3xl mx-auto">
-              Our comprehensive approach to environmental conservation focuses on protecting Sri Lanka's natural heritage while empowering local communities.
+              Our comprehensive approach to environmental conservation focuses on protecting Sri Lankas natural heritage while empowering local communities.
             </h5>
           </div>
           
@@ -284,9 +275,9 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-amber-800 mb-6">Sri Lanka's Indigenous Heritage</h2>
+              <h2 className="text-4xl font-bold text-amber-800 mb-6">Sri Lankas Indigenous Heritage</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                For centuries, Sri Lanka's indigenous communities have maintained a profound connection with nature, 
+                For centuries, Sri Lankas indigenous communities have maintained a profound connection with nature, 
                 developing sophisticated environmental management practices that have sustained both ecosystems and livelihoods.
               </p>
               <div className="space-y-4">
@@ -331,7 +322,7 @@ const Homepage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-green-800 mb-6">Join Our Environmental Mission</h2>
           <p className="text-xl text-gray-700 mb-8">
-            Become part of Sri Lanka's leading environmental forum and help preserve our natural heritage for future generations.
+            Become part of Sri Lankas leading environmental forum and help preserve our natural heritage for future generations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 flex items-center justify-center space-x-2">
