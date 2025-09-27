@@ -151,8 +151,8 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Vision</h2>
-              <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+              <h2 className="text-4xl font-bold text-green-800 mb-6">Our Vision</h2>
+              <div className="bg-green-100 p-6 rounded-xl ">
                 <p className="text-2xl font-semibold text-green-700 mb-4">
                   Lets conserve the nature for the posterity
                 </p>
@@ -163,17 +163,14 @@ const AboutPage = () => {
             </div>
             
             <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Mission</h2>
-              <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+              <h2 className="text-4xl font-bold text-blue-900 mb-6">Our Mission</h2>
+              <div className="bg-blue-100 p-6 rounded-xl">
                 <p className="text-gray-700 leading-relaxed mb-4">
                   To advise on promotion and development of environmental-based principles, working toward 
                   lasting solutions to environmental problems in Sri Lanka through community participation 
                   and expert guidance as a non-profit organization.
                 </p>
-                <div className="flex items-center space-x-2 text-blue-600">
-                  <Target className="h-5 w-5" />
-                  <span className="font-medium">Community-Driven Environmental Solutions</span>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -184,11 +181,11 @@ const AboutPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Key Objectives</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Our Key Objectives</h2>
+            <h5 className="text-xl text-gray-600 max-w-3xl mx-auto">
               NEF operates through comprehensive objectives that address environmental conservation, 
               community engagement, and indigenous knowledge preservation.
-            </p>
+            </h5>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -199,7 +196,7 @@ const AboutPage = () => {
                   <div className="bg-green-100 p-3 rounded-full w-fit mb-4">
                     <IconComponent className="h-8 w-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">{objective.title}</h3>
+                  <h3 className="text-xl font-semibold text-green-800 mb-3">{objective.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{objective.description}</p>
                 </div>
               );
@@ -212,10 +209,10 @@ const AboutPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Organizational Structure</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Organizational Structure</h2>
+            <h5 className="text-xl text-gray-600 max-w-3xl mx-auto">
               NEF operates through a well-structured governance system ensuring effective environmental action across Sri Lanka.
-            </p>
+            </h5>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -223,7 +220,7 @@ const AboutPage = () => {
               <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
                 <h3 className="text-xl font-semibold text-green-800 mb-3">{structure.title}</h3>
                 <p className="text-gray-700 mb-4">{structure.description}</p>
-                <div className="bg-white p-3 rounded-lg border-l-4 border-green-500">
+                <div className="bg-green-200 p-3 rounded-lg ">
                   <p className="text-sm font-medium text-gray-600">{structure.members}</p>
                 </div>
               </div>
@@ -236,10 +233,10 @@ const AboutPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Membership Categories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Membership Categories</h2>
+            <h5 className="text-xl text-gray-600 max-w-3xl mx-auto">
               Join NEF through various membership categories designed to accommodate different levels of commitment to environmental conservation.
-            </p>
+            </h5>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -252,7 +249,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">{membership.type}</h3>
+                  <h3 className="text-lg font-semibold text-green-800 mb-3">{membership.type}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{membership.description}</p>
                 </div>
               </div>
@@ -266,62 +263,62 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-amber-800 mb-6">Preserving Indigenous Heritage</h2>
+              <h2 className="text-4xl font-bold text-blue-900 mb-6">Preserving Indigenous Heritage</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Sri Lankas indigenous communities have maintained sophisticated environmental knowledge systems for over 2,500 years. NEF recognizes and works to preserve this invaluable heritage.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <TreePine className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <TreePine className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Traditional forest conservation practices</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <Droplets className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <Droplets className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Ancient water management systems (Tank cascade systems)</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <BookOpen className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <BookOpen className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Traditional Ayurvedic medicinal plant knowledge</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <Mountain className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <Mountain className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Sacred grove conservation (Devrai tradition)</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-blue-100 to-green-100 p-8 rounded-2xl">
               <div className="text-center mb-6">
-                <div className="bg-amber-200 p-4 rounded-full w-fit mx-auto mb-4">
-                  <Heart className="h-12 w-12 text-amber-800" />
+                <div className="bg-blue-200 p-4 rounded-full w-fit mx-auto mb-4">
+                  <Heart className="h-12 w-12 text-blue-900" />
                 </div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-4">Our Commitment</h3>
-                <p className="text-amber-700 leading-relaxed mb-6">
-                  NEF works directly with village elders, traditional healers, and indigenous communities 
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Commitment</h3>
+                <p className="text-blue-700 leading-relaxed mb-6">
+                  NEF works directly with village elders, traditional healers, and indigenous communities
                   to document and preserve their environmental wisdom for future generations.
                 </p>
               </div>
               <div className="bg-white/50 p-4 rounded-lg">
                 <div className="flex items-center justify-center space-x-6">
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-amber-800">200+</p>
-                    <p className="text-sm text-amber-700">Elders Interviewed</p>
+                    <p className="text-2xl font-bold text-blue-800">200+</p>
+                    <p className="text-sm text-blue-700">Elders Interviewed</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-amber-800">500+</p>
-                    <p className="text-sm text-amber-700">Plants Documented</p>
+                    <p className="text-2xl font-bold text-blue-800">500+</p>
+                    <p className="text-sm text-blue-700">Plants Documented</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-amber-800">50+</p>
-                    <p className="text-sm text-amber-700">Practices Recorded</p>
+                    <p className="text-2xl font-bold text-blue-800">50+</p>
+                    <p className="text-sm text-blue-700">Practices Recorded</p>
                   </div>
                 </div>
               </div>
@@ -334,9 +331,9 @@ const AboutPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Founding Members</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              NEF was established on November 1st, 2012, by visionary environmental advocates committed to preserving Sri Lankas natural heritage.</p>
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Our Founding Members</h2>
+            <h5 className="text-xl text-gray-600 max-w-3xl mx-auto">
+              NEF was established on November 1st, 2012, by visionary environmental advocates committed to preserving Sri Lankas natural heritage.</h5>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {founderMembers.map((founder, index) => (
@@ -345,7 +342,7 @@ const AboutPage = () => {
                   <div className="bg-green-100 p-4 rounded-full w-fit mx-auto mb-4">
                     <Users className="h-12 w-12 text-green-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">{founder.name}</h3>
+                  <h3 className="text-lg font-semibold text-green-800 mb-2">{founder.name}</h3>
                   <p className="text-green-600 font-medium mb-2">{founder.position}</p>
                   {founder.department && (
                     <p className="text-sm text-gray-600 mb-2">{founder.department}</p>

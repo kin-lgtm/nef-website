@@ -197,7 +197,7 @@ const Homepage = () => {
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-lg ">
-              <Users className="h-12 w-12 text-blue-600 mb-4" />
+              <Users className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Community Engagement</h3>
               <p className="text-gray-600">
                 Working with local communities to implement environment-friendly solutions.
@@ -205,7 +205,7 @@ const Homepage = () => {
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <BookOpen className="h-12 w-12 text-amber-600 mb-4" />
+              <BookOpen className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Indigenous Knowledge</h3>
               <p className="text-gray-600">
                 Preserving traditional ecological knowledge and sustainable practices.
@@ -271,43 +271,43 @@ const Homepage = () => {
       </section>
 
       {/* Indigenous Heritage Highlight */}
-      <section className="py-16 bg-amber-50">
+      <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-amber-800 mb-6">Sri Lankas Indigenous Heritage</h2>
+              <h2 className="text-4xl font-bold text-blue-900 mb-6">Sri Lankas Indigenous Heritage</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 For centuries, Sri Lankas indigenous communities have maintained a profound connection with nature, 
                 developing sophisticated environmental management practices that have sustained both ecosystems and livelihoods.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <TreePine className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <TreePine className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Traditional forest management systems</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <Droplets className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <Droplets className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Ancient irrigation and water conservation</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-amber-100 p-2 rounded-full">
-                    <BookOpen className="h-6 w-6 text-amber-600" />
+                  <div className="bg-blue-100 p-2 rounded-full">
+                    <BookOpen className="h-6 w-6 text-blue-900" />
                   </div>
                   <p className="text-gray-700">Medicinal plant knowledge and preservation</p>
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-amber-200 to-orange-200 p-8 rounded-2xl">
+            <div className="bg-gradient-to-br from-blue-100 to-green-100 p-8 rounded-2xl">
               <div className="text-center">
-                <div className="bg-amber-300 p-4 rounded-full w-fit mx-auto mb-6">
-                  <Users className="h-16 w-16 text-amber-800" />
+                <div className="bg-blue-300 p-4 rounded-full w-fit mx-auto mb-6">
+                  <Users className="h-16 w-16 text-blue-800" />
                 </div>
-                <h3 className="text-2xl font-bold text-amber-800 mb-4">Preserving Wisdom</h3>
-                <p className="text-amber-700 leading-relaxed">
+                <h3 className="text-2xl font-bold text-blue-800 mb-4">Preserving Wisdom</h3>
+                <p className="text-blue-700 leading-relaxed">
                   NEF works directly with indigenous communities to document, preserve, and integrate traditional 
                   ecological knowledge with modern conservation science.
                 </p>
