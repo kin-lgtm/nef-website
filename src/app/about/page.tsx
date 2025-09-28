@@ -15,7 +15,7 @@ import {
   TreePine,
   Droplets,
   Mountain,
-
+Facebook, Twitter, Instagram,
   Lightbulb,
   Shield,
 
@@ -365,18 +365,18 @@ const AboutPage = () => {
         NEF was established on November 1st, 2012, by visionary environmental advocates committed to preserving Sri Lanka&apos;s natural heritage.
       </h5>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* Top Row: Chairperson (full width on mobile, spans all on desktop) */}
-      {panelMembers.filter(member => member.isChairperson).map((member, index) => (
-        <div key={index} className="md:col-span-3"> {/* Full width */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+    <div className="grid grid-cols-1 md:grid-cols-1 gap-8"> {/* Single column for chairperson */}
+      {/* First Row: Chairperson (centered) */}
+      {panelMembers.filter(member => member.role === "Chairperson").map((member, index) => (
+        <div key={index} className="mx-auto max-w-xs"> {/* Centered with max width */}
+          <div className="">
             <div className="text-center">
-              <div className="w-60 h-80 overflow-hidden rounded-lg mb-4">
+              <div className="w-full h-100 overflow-hidden rounded-lg mb-4">
                 <Image
                   src={member.image}
                   alt={`${member.name}&apos;s profile`}
-                  width={400} // Wider for chairperson
-                  height={600} // 16:10 aspect ratio for rectangle
+                  width={300}
+                  height={600} // 1:2 aspect ratio for consistency with core members
                   className="object-cover w-full h-full"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -384,42 +384,36 @@ const AboutPage = () => {
                   }}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-green-800 mb-2">{member.name}</h3>
-              <p className="text-green-600 font-medium mb-2">{member.role} - {member.expertise}</p>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">{member.name}</h3>
+              <p className="text-gray-500 font-medium mb-2">{member.role} - {member.expertise}</p>
               <p className="text-sm text-gray-600 mb-4">{member.department}</p>
-              <div className="flex justify-center space-x-6 mt-4"> {/* Larger spacing for chairperson */}
-                <a href={member.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                  </svg>
-                </a>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 transition-colors">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM20 19h-3v-5.634c0-1.032-.02-2.358-1.438-2.358-1.438 0-1.658 1.122-1.658 2.28V19h-3V8h3v1.367c.472-.895 1.313-1.368 2.529-1.368 2.766 0 3.279 1.821 3.279 4.19V19z" />
-                  </svg>
-                </a>
-                <a href={member.x} target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-700 transition-colors">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
+              <div className="flex justify-center space-x-4 mt-4">
+                <a href={member.facebook} target="_blank" rel="noopener noreferrer" className="bg-blue-900 p-2 rounded-full hover:bg-green-600 transition-colors">
+    <Facebook className="h-6 w-6 text-white" />
+  </a>
+  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-900 p-2 rounded-full hover:bg-green-600 transition-colors">
+    <Twitter className="h-6 w-6 text-white" />
+  </a>
+  <a href={member.x} target="_blank" rel="noopener noreferrer" className="bg-blue-900 p-2 rounded-full hover:bg-green-600 transition-colors">
+    <Instagram className="h-6 w-6 text-white" />
+  </a>
               </div>
             </div>
           </div>
         </div>
       ))}
 
-      {/* Bottom Row: 4 Core Members */}
-      <div className="grid md:grid-cols-4 gap-8 md:col-span-3"> {/* 4 columns on desktop */}
-        {panelMembers.filter(member => member.role === "Core Member").slice(0, 4).map((member, index) => (
-          <div key={index} className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+      {/* Second and Third Rows: 8 Core Members (2 rows of 4) */}
+      <div className="mt-10 grid md:grid-cols-4 gap-12">
+        {panelMembers.filter(member => member.role === "Core Member").slice(0, 8).map((member, index) => (
+          <div key={index} className="">
             <div className="text-center">
-              <div className="w-full h-80 overflow-hidden rounded-lg mb-4"> {/* Slightly shorter for core members */}
+              <div className="w-full h-100 overflow-hidden rounded-lg mb-4">
                 <Image
                   src={member.image}
                   alt={`${member.name}&apos;s profile`}
                   width={300}
-                  height={600} // 3:2 aspect ratio
+                  height={600} // 1:2 aspect ratio
                   className="object-cover w-full h-full"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -427,25 +421,19 @@ const AboutPage = () => {
                   }}
                 />
               </div>
-              <h3 className="text-lg font-semibold text-green-800 mb-2">{member.name}</h3>
-              <p className="text-green-600 font-medium mb-2">{member.expertise}</p>
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">{member.name}</h3>
+              <p className="text-gray-500 font-medium mb-2">{member.expertise}</p>
               <p className="text-sm text-gray-600 mb-4">{member.department}</p>
               <div className="flex justify-center space-x-4 mt-4">
-                <a href={member.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                  </svg>
-                </a>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM20 19h-3v-5.634c0-1.032-.02-2.358-1.438-2.358-1.438 0-1.658 1.122-1.658 2.28V19h-3V8h3v1.367c.472-.895 1.313-1.368 2.529-1.368 2.766 0 3.279 1.821 3.279 4.19V19z" />
-                  </svg>
-                </a>
-                <a href={member.x} target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-700 transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
+                <a href={member.facebook} target="_blank" rel="noopener noreferrer" className="bg-blue-900 p-2 rounded-full hover:bg-green-600 transition-colors">
+    <Facebook className="h-6 w-6 text-white" />
+  </a>
+  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-900 p-2 rounded-full hover:bg-green-600 transition-colors">
+    <Twitter className="h-6 w-6 text-white" />
+  </a>
+  <a href={member.x} target="_blank" rel="noopener noreferrer" className="bg-blue-900 p-2 rounded-full hover:bg-green-600 transition-colors">
+    <Instagram className="h-6 w-6 text-white" />
+  </a>
               </div>
             </div>
           </div>
