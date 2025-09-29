@@ -108,7 +108,7 @@ const NewsEventsPage = () => {
           <div className="text-center">           
             <h1 className="text-5xl md:text-6xl font-bold mb-6">News & Events</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Stay connected with NEF's latest initiatives, upcoming events, and environmental conservation milestones across Sri Lanka.
+              Stay connected with NEFs latest initiatives, upcoming events, and environmental conservation milestones across Sri Lanka.
             </p>
           </div>
         </div>
