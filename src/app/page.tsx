@@ -240,7 +240,7 @@ const Homepage = () => {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600/80 to-emerald-800 text-white">
+      <section className="py-16 bg-[#3c3c3c] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Programs</h2>
@@ -254,7 +254,7 @@ const Homepage = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
                 <div className="flex items-center justify-between mb-4">
                   <Award className="h-8 w-8 text-green-300" />
-                  <span className="bg-green-600 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-green-600 px-3 py-2 text-sm font-medium">
                     {program.participants}
                   </span>
                 </div>
@@ -271,7 +271,7 @@ const Homepage = () => {
       </section>
 
       {/* Indigenous Heritage Highlight */}
-      <section className="py-16 ">
+      {/* <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -315,7 +315,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 bg-green-50">
