@@ -137,8 +137,8 @@ const NewsEventsPage = () => {
                     <p className="text-gray-200 text-sm mb-4 line-clamp-2">{item.excerpt}</p>
                     
                     <div className="flex justify-center mb-4">
-                      <a href={`/news-events/${item.id}`}>
-                        <button className="bg-green-600 hover:bg-red-700 text-white px-6 py-2 font-semibold text-sm transition-all duration-300">
+                      <a href={`/news/${item.id}`}>
+                        <button className="bg-blue-900 hover:bg-red-700 text-white px-6 py-4 font-semibold text-sm transition-all duration-300">
                           KNOW MORE
                         </button>
                       </a>

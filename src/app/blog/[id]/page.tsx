@@ -23,7 +23,7 @@ interface BlogPost {
 // Define the blogDetails object with an index signature
 const blogDetails: { [key: string]: BlogPost } = {
   '1': {
-    title: 'Forest Conservation Efforts',
+    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
     image: '/images/blog-1.jpg',
     description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
     additionalImages: [
@@ -37,7 +37,7 @@ const blogDetails: { [key: string]: BlogPost } = {
     date: '2025-09-01',
     author: 'Dr. Ruchira Somaweera',
     readingTime: '5 min',
-    tags: ['forests', 'conservation'],
+    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
   },
   '2': {
     title: 'Indigenous Knowledge Preservation',
@@ -72,21 +72,21 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       {/* Back Button and Title */}
-      <section className="py-8 bg-white sticky top-0 z-10 shadow-md">
+      <section className="py-8 bg-white sticky top-0 z-10 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/blog" className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors mb-4">
             <ArrowLeft className="h-5 w-5 mr-2" /> Back to Blog
-          </Link>
-          <h1 className="text-4xl font-bold text-gray-800 text-center">{post.title}</h1>
+          </Link>  
         </div>
       </section>
 
       {/* Three-Column Content */}
-      <section className="py-16 bg-gray-50">
+      <section className="bg-gray-50 mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Main Content (Spans first 2 columns) */}
             <div className="col-span-2 space-y-8">
+              <h1 className="text-4xl font-bold text-gray-800">{post.title}</h1>
               {/* Initial Image */}
               <div className="w-full h-96 overflow-hidden">
                 <Image
@@ -135,18 +135,18 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
             {/* Post Details (Third column) */}
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-green-800 mb-4">Post Details</h3>
+                <h3 className="text-xl font-semibold text-green-800 mb-4">Details</h3>
                 <div className="text-gray-600">
                   <p><strong>Date:</strong> {post.date}</p>
                   <p><strong>Author:</strong> {post.author}</p>
                   <p><strong>Reading Time:</strong> {post.readingTime}</p>
                 </div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-green-800 mb-4">Tags</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {post.tags.map((tag, idx) => (
-                    <span key={idx} className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">
+                    <span key={idx} className="text-s px-2 py-1 bg-green-600  text-white">
                       {tag}
                     </span>
                   ))}

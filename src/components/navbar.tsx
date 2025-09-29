@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-green-800 via-green-700 to-emerald-800 h-[100px] shadow-lg sticky top-0 z-50">
+    <nav className="bg-black h-[100px] shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[100px]"> {/* Adjusted height */}
           {/* Logo and Brand */}
@@ -44,7 +44,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-white hover:text-green-200 px-4 py-3 rounded-md text-base font-medium transition-all duration-300 flex items-center space-x-1 hover:bg-green-600/30"
+                  className="text-white hover:text-green-200 px-4 py-3 rounded-md text-base font-medium transition-all duration-300 flex items-center space-x-1 "
                 >
                   <span>{item.name}</span>
                 </a>
