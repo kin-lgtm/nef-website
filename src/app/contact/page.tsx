@@ -20,11 +20,8 @@ const ContactPage = () => {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-800 via-emerald-700 to-green-600 text-white py-20">
+        <section className="bg-gradient-to-r from-green-600 to-black/90 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex justify-center mb-6">
-              <MapPin className="h-16 w-16 text-white" />
-            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
               Get in touch with the National Environmental Forum to collaborate, volunteer, or learn more about our initiatives.

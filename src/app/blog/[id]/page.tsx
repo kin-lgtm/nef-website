@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
 // Define the interface for a blog post
 interface BlogPost {
@@ -71,11 +72,11 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       {/* Back Button and Title */}
-      <section className="py-8 bg-white sticky top-0 z-10 ">
+      <section className="py-8 bg-white sticky top-0 z-10 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a href="/blog" className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors mb-4">
+          <Link href="/blog" className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors mb-4">
             <ArrowLeft className="h-5 w-5 mr-2" /> Back to Blog
-          </a>
+          </Link>
           <h1 className="text-4xl font-bold text-gray-800 text-center">{post.title}</h1>
         </div>
       </section>

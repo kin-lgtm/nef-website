@@ -24,7 +24,7 @@ const BlogPage = () => {
       date: "September 15, 2025",
       author: "Dr. Sumedha Manjula",
       category: "Indigenous Knowledge",
-      image: "/images/blog-1.jpg", // Placeholder for image
+      image: "/images/blog-1.jpg",
       readingTime: "8 min read",
       tags: ["Water Conservation", "Traditional Practices", "Climate Resilience"]
     },
@@ -120,14 +120,10 @@ const BlogPage = () => {
     <div className="min-h-screen bg-gray-50">
         <Navbar />
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-green-800 via-emerald-700 to-green-600 text-white py-20">
+      <div className="bg-gradient-to-r from-green-600 to-black/90 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/20 p-4 rounded-full">
-                <BookOpen className="h-16 w-16 text-white" />
-              </div>
-            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold mb-6">NEF Blog</h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
               Insights, stories, and expert analysis on environmental conservation, indigenous knowledge, and sustainable development in Sri Lanka.
@@ -170,46 +166,35 @@ const BlogPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-                <div className="relative h-48">
+              <div key={post.id} className="bg-white shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                <div className="relative h-120">
                   <img 
                     src={post.image} 
                     alt={post.title} 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {post.category}
-                  </div>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">{post.title}</h2>
-                  <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center space-x-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="bg-green-600 text-white px-3 py-1 text-xs font-medium inline-block mb-3">
+                      {post.category}
+                    </div>
+                    <h2 className="text-xl font-bold mb-2 line-clamp-2">{post.title}</h2>
+                    <p className="text-gray-200 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+                <div className="flex items-center justify-between text-xs text-gray-300">
                       <div className="flex items-center space-x-1">
-                        <Calendar className="h-4 w-4" />
+                        <Calendar className="h-3 w-3" />
                         <span>{post.date}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <User className="h-4 w-4" />
-                        <span>{post.author}</span>
-                      </div>
+                      <span>{post.readingTime}</span>
                     </div>
-                    <span>{post.readingTime}</span>
+                    <div className="flex justify-center mt-10">
+                      <a href={`/blog/${post.id}`}>
+                        <button className="bg-green-600 hover:bg-red-700 text-white px-6 py-2 font-semibold text-sm transition-all duration-300">
+                          KNOW MORE
+                        </button>
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag, idx) => (
-                      <span key={idx} className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href={`/blog/${post.id}`} 
-                    className="inline-flex items-center text-green-600 font-medium hover:text-green-800 transition-colors"
-                  >
-                    Read More <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
                 </div>
               </div>
             ))}
@@ -231,7 +216,8 @@ const BlogPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Subscribe to Our Blog</h2>
           <p className="text-xl text-green-100 mb-8">
-            Stay updated with the latest insights on environmental conservation and indigenous knowledge preservation.      </p>
+            Stay updated with the latest insights on environmental conservation and indigenous knowledge preservation.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
             <input 
               type="email" 
@@ -246,7 +232,7 @@ const BlogPage = () => {
       </section>
 
       {/* Footer */}
-        <Footer />
+      <Footer />
     </div>
   );
 };

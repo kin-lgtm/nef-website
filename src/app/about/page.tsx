@@ -230,14 +230,9 @@ const AboutPage = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-green-800 via-emerald-700 to-green-600 text-white py-20">
+      <div className="bg-gradient-to-r from-green-600 to-black/90 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/20 p-4 rounded-full">
-                <Leaf className="h-16 w-16 text-white" />
-              </div>
-            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">About NEF</h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
               National Environmental Forum - Sri Lanka has premier environmental protection assembly, working to conserve nature for posterity since 2012.
@@ -253,9 +248,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-4xl font-bold text-green-800 mb-6">Our Vision</h2>
               <div className="bg-green-100 p-6 rounded-xl ">
-                <p className="text-2xl font-semibold text-green-700 mb-4">
-                  Lets conserve the nature for the posterity
-                </p>
+      
                 <p className="text-gray-700 leading-relaxed">
                   Our vision represents our commitment to environmental stewardship, ensuring that Sri Lankas rich biodiversity and indigenous ecological knowledge are preserved for future generations.
                 </p>
@@ -444,7 +437,7 @@ const AboutPage = () => {
 </section>
 
       {/* Indigenous Knowledge Section */}
-      <section className="py-16 bg-amber-50">
+      {/* <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -510,7 +503,7 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Founding Members */}
       <section className="py-16 bg-white">
