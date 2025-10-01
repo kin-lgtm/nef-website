@@ -1,129 +1,29 @@
+// app/blog/page.tsx
+'use client';
+
 import React from 'react';
-import { Layout } from 'lucide-react';
-import { 
-  Leaf, 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Search,
-  Globe,
-  TreePine,
-  BookOpen,
-  Heart,
-  Users
-} from 'lucide-react';
+import { Layout, Leaf, Calendar, Search, Globe, TreePine, BookOpen, Heart, Users } from 'lucide-react';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
+import { blogPosts } from '@/lib/blogPosts';
 
 const BlogPage = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Preserving Sri Lanka's Ancient Tank Systems: Indigenous Water Management Wisdom",
-      excerpt: "Explore how traditional cascade tank systems have sustained Sri Lankan agriculture for over 2,000 years and NEF's efforts to revive this indigenous knowledge in the face of climate change.",
-      date: "September 15, 2025",
-      author: "Dr. Sumedha Manjula",
-      category: "Indigenous Knowledge",
-      image: "/images/blog-1.jpg",
-      readingTime: "8 min read",
-      tags: ["Water Conservation", "Traditional Practices", "Climate Resilience"]
-    },
-    {
-      id: 2,
-      title: "The Role of Sacred Groves in Biodiversity Conservation",
-      excerpt: "Discover how Sri Lanka's sacred forest groves (Devale) protect endangered species and maintain ecological balance, with insights from NEF's community-based preservation projects.",
-      date: "August 28, 2025",
-      author: "Amitha Bandara Andagala",
-      category: "Biodiversity",
-      image: "/images/blog-1.jpg",
-      readingTime: "6 min read",
-      tags: ["Forest Protection", "Cultural Heritage", "Community Action"]
-    },
-    {
-      id: 3,
-      title: "Youth Engagement in Environmental Conservation: NEF's Educational Initiatives",
-      excerpt: "Learn about NEF's programs aimed at cultivating environmental awareness among Sri Lanka's youth, including school workshops and field studies on indigenous ecological practices.",
-      date: "July 10, 2025",
-      author: "Herath Mudiyanselage Punchi Banda Herath",
-      category: "Education",
-      image: "/images/blog-1.jpg",
-      readingTime: "7 min read",
-      tags: ["Youth Education", "Environmental Habits", "Future Generations"]
-    },
-    {
-      id: 4,
-      title: "Alternative Energy Solutions: Promoting Solar and Wind in Rural Sri Lanka",
-      excerpt: "NEF's collaborative projects with communities to implement sustainable energy alternatives, reducing reliance on fossil fuels while preserving traditional knowledge.",
-      date: "June 5, 2025",
-      author: "NEF Research Team",
-      category: "Sustainable Energy",
-      image: "/images/blog-1.jpg",
-      readingTime: "9 min read",
-      tags: ["Renewable Energy", "Community Development", "Climate Action"]
-    },
-    {
-      id: 5,
-      title: "Alternative Energy Solutions: Promoting Solar and Wind in Rural Sri Lanka",
-      excerpt: "NEF's collaborative projects with communities to implement sustainable energy alternatives, reducing reliance on fossil fuels while preserving traditional knowledge.",
-      date: "June 5, 2025",
-      author: "NEF Research Team",
-      category: "Sustainable Energy",
-      image: "/images/blog-1.jpg",
-      readingTime: "9 min read",
-      tags: ["Renewable Energy", "Community Development", "Climate Action"]
-    },
-    {
-      id: 6,
-      title: "Alternative Energy Solutions: Promoting Solar and Wind in Rural Sri Lanka",
-      excerpt: "NEF's collaborative projects with communities to implement sustainable energy alternatives, reducing reliance on fossil fuels while preserving traditional knowledge.",
-      date: "June 5, 2025",
-      author: "NEF Research Team",
-      category: "Sustainable Energy",
-      image: "/images/blog-1.jpg",
-      readingTime: "9 min read",
-      tags: ["Renewable Energy", "Community Development", "Climate Action"]
-    },
-    {
-      id: 7,
-      title: "Alternative Energy Solutions: Promoting Solar and Wind in Rural Sri Lanka",
-      excerpt: "NEF's collaborative projects with communities to implement sustainable energy alternatives, reducing reliance on fossil fuels while preserving traditional knowledge.",
-      date: "June 5, 2025",
-      author: "NEF Research Team",
-      category: "Sustainable Energy",
-      image: "/images/blog-1.jpg",
-      readingTime: "9 min read",
-      tags: ["Renewable Energy", "Community Development", "Climate Action"]
-    },
-    {
-      id: 8,
-      title: "Alternative Energy Solutions: Promoting Solar and Wind in Rural Sri Lanka",
-      excerpt: "NEF's collaborative projects with communities to implement sustainable energy alternatives, reducing reliance on fossil fuels while preserving traditional knowledge.",
-      date: "June 5, 2025",
-      author: "NEF Research Team",
-      category: "Sustainable Energy",
-      image: "/images/blog-1.jpg",
-      readingTime: "9 min read",
-      tags: ["Renewable Energy", "Community Development", "Climate Action"]
-    }
-  ];
-
   const categories = [
-    { name: "Indigenous Knowledge", icon: BookOpen, count: 12 },
-    { name: "Biodiversity Conservation", icon: TreePine, count: 8 },
-    { name: "Climate Change", icon: Globe, count: 15 },
-    { name: "Youth Education", icon: Users, count: 10 },
-    { name: "Sustainable Development", icon: Leaf, count: 7 },
-    { name: "Community Action", icon: Heart, count: 9 }
+    { name: 'Indigenous Knowledge', icon: BookOpen, count: 12 },
+    { name: 'Biodiversity Conservation', icon: TreePine, count: 8 },
+    { name: 'Climate Change', icon: Globe, count: 15 },
+    { name: 'Youth Education', icon: Users, count: 10 },
+    { name: 'Sustainable Development', icon: Leaf, count: 7 },
+    { name: 'Community Action', icon: Heart, count: 9 },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-        <Navbar />
+      <Navbar />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-600 to-black/90 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            
             <h1 className="text-5xl md:text-6xl font-bold mb-6">NEF Blog</h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
               Insights, stories, and expert analysis on environmental conservation, indigenous knowledge, and sustainable development in Sri Lanka.
@@ -138,9 +38,9 @@ const BlogPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <div className="relative">
-                <input 
-                  type="text" 
-                  placeholder="Search blog posts..." 
+                <input
+                  type="text"
+                  placeholder="Search blog posts..."
                   className="w-full py-3 px-4 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
                 />
                 <Search className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
@@ -148,8 +48,8 @@ const BlogPage = () => {
             </div>
             <div className="flex items-center space-x-4 overflow-x-auto pb-2">
               {categories.map((cat, index) => (
-                <button 
-                  key={index} 
+                <button
+                  key={index}
                   className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-green-100 transition-colors whitespace-nowrap"
                 >
                   <cat.icon className="h-4 w-4 text-green-600" />
@@ -166,21 +66,20 @@ const BlogPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <div key={post.id} className="bg-white shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+              <div
+                key={post.id}
+                className="bg-white shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              >
                 <div className="relative h-120">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <div className="bg-green-600 text-white px-3 py-1 text-xs font-medium inline-block mb-3">
                       {post.category}
                     </div>
                     <h2 className="text-xl font-bold mb-2 line-clamp-2">{post.title}</h2>
-                    <p className="text-gray-200 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
-                <div className="flex items-center justify-between text-xs text-gray-300">
+                    <p className="text-gray-200 text-sm mb-4 line-clamp-2">{post.description}</p>
+                    <div className="flex items-center justify-between text-xs text-gray-300">
                       <div className="flex items-center space-x-1">
                         <Calendar className="h-3 w-3" />
                         <span>{post.date}</span>
@@ -199,7 +98,7 @@ const BlogPage = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Pagination */}
           <div className="flex justify-center mt-12 space-x-2">
             <button className="px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-600 hover:bg-gray-50">Previous</button>
@@ -219,9 +118,9 @@ const BlogPage = () => {
             Stay updated with the latest insights on environmental conservation and indigenous knowledge preservation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
+            <input
+              type="email"
+              placeholder="Enter your email"
               className="w-full py-4 px-6 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white placeholder:text-green-100"
             />
             <button className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-all duration-300">
@@ -231,7 +130,6 @@ const BlogPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

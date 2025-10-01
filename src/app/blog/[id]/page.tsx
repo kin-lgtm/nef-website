@@ -1,4 +1,5 @@
-'use client'
+// app/blog/[id]/page.tsx
+'use client';
 
 import React from 'react';
 import Navbar from '@/components/navbar';
@@ -6,179 +7,39 @@ import Footer from '@/components/footer';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-
-// Define the interface for a blog post
-interface BlogPost {
-  title: string;
-  image: string;
-  description: string;
-  additionalImages: string[];
-  secondDescription: string;
-  date: string;
-  author: string;
-  readingTime: string;
-  tags: string[];
-}
-
-// Define the blogDetails object with an index signature
-const blogDetails: { [key: string]: BlogPost } = {
-  '1': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  '2': {
-    title: 'Indigenous Knowledge Preservation',
-    image: '/images/blog-1.jpg',
-    description: 'This post delves into how NEF is preserving indigenous knowledge in Sri Lanka. Indigenous communities hold valuable insights into sustainable practices that have been passed down for generations.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'Through workshops and documentation, we\'re ensuring these practices are shared with future generations, blending traditional wisdom with modern conservation techniques.',
-    date: '2025-09-15',
-    author: 'Prof. Gamini Pushpakumara',
-    readingTime: '7 min',
-    tags: ['indigenous', 'culture'],
-  },
-  '3': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  '4': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  '5': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  '6': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  '7': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  '8': {
-    title: 'Preserving Sri Lanka\'s Ancient Tank Systems: Indigenous Water Management Wisdom',
-    image: '/images/blog-1.jpg',
-    description: 'This blog post explores the National Environmental Forum\'s (NEF) latest initiatives to protect Sri Lanka\'s rich forest ecosystems. Our efforts focus on reforestation, wildlife habitat preservation, and community involvement. Over the past year, we\'ve planted over 10,000 trees and engaged 500 local volunteers.',
-    additionalImages: [
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-      '/images/blog-1.jpg',
-    ],
-    secondDescription: 'The success of these initiatives is attributed to the collaboration with local communities and experts. We\'ve also implemented monitoring systems to track the growth and health of the newly planted trees, ensuring long-term sustainability.',
-    date: '2025-09-01',
-    author: 'Dr. Ruchira Somaweera',
-    readingTime: '5 min',
-    tags: ['forests', 'conservation', 'indigenous', 'culture', 'indigenous', 'culture','indigenous', 'culture','indigenous', 'culture'],
-  },
-  // Add more blog details as needed
-};
+import { blogPosts, BlogPost } from '@/lib/blogPosts';
 
 export default function BlogDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  // Unwrap the params Promise using React.use()
+  // Unwrap the params Promise
   const resolvedParams = React.use(params);
   const { id } = resolvedParams;
 
-  const post = blogDetails[id];
+  // Find the post by ID (convert id to number since blogPosts uses number IDs)
+  const post = blogPosts.find((p) => p.id === parseInt(id));
 
   if (!post) {
-    return <div className="min-h-screen bg-gray-50 flex items-center justify-center">Blog post not found</div>;
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800">Blog Post Not Found</h2>
+          <p className="text-gray-600 mt-2">The blog post you are looking for does not exist.</p>
+          <Link href="/blog" className="mt-4 inline-flex items-center text-green-600 hover:text-green-800 transition-colors">
+            <ArrowLeft className="h-5 w-5 mr-2" /> Back to Blog
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       {/* Back Button and Title */}
-      <section className="py-8 bg-white sticky top-0 z-10 ">
+      <section className="py-8 bg-white sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/blog" className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors mb-4">
             <ArrowLeft className="h-5 w-5 mr-2" /> Back to Blog
-          </Link>  
+          </Link>
         </div>
       </section>
 
@@ -205,9 +66,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
               </div>
 
               {/* First Description */}
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {post.description}
-              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">{post.description}</p>
 
               {/* Additional Images */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -229,26 +88,33 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
               </div>
 
               {/* Second Description */}
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {post.secondDescription}
-              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">{post.secondDescription}</p>
             </div>
 
             {/* Post Details (Third column) */}
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-green-800 mb-4">Details</h3>
-                <div className="text-gray-600">
-                  <p><strong>Date:</strong> {post.date}</p>
-                  <p><strong>Author:</strong> {post.author}</p>
-                  <p><strong>Reading Time:</strong> {post.readingTime}</p>
+                <div className="text-gray-600 space-y-2">
+                  <p>
+                    <strong>Date:</strong> {post.date}
+                  </p>
+                  <p>
+                    <strong>Author:</strong> {post.author}
+                  </p>
+                  <p>
+                    <strong>Reading Time:</strong> {post.readingTime}
+                  </p>
+                  <p>
+                    <strong>Category:</strong> {post.category}
+                  </p>
                 </div>
               </div>
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-green-800 mb-4">Tags</h3>
                 <div className="flex flex-wrap gap-3">
                   {post.tags.map((tag, idx) => (
-                    <span key={idx} className="text-s px-2 py-1 bg-green-600  text-white">
+                    <span key={idx} className="text-sm px-2 py-1 bg-green-600 text-white rounded">
                       {tag}
                     </span>
                   ))}
@@ -267,9 +133,9 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
             Stay updated with the latest insights on environmental conservation and indigenous knowledge preservation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
+            <input
+              type="email"
+              placeholder="Enter your email"
               className="w-full py-4 px-6 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white placeholder:text-green-100"
             />
             <button className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-all duration-300">
@@ -279,7 +145,6 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
