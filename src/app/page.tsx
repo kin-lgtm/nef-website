@@ -151,7 +151,7 @@ const Homepage = () => {
               </button>
             </div>
             {/* Optional: Display current date and time */}
-            <p className="text-sm text-white/70 mt-4">Last updated: {formattedDateTime}</p>
+            
           </div>
         </div>
         
